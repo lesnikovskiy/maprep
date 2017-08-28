@@ -8,15 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Hero";
-        this.hero = "Windstorm";
+        this.title = 'Hero';
+        this.hero = {
+            id: 1,
+            name: 'Windstorm'
+        };
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>{{title}}</h1><h2>{{hero}} details!</h2>"
+        template: "\n\t\t\t<h1>{{title}}</h1>\n\t\t\t<h2>{{hero.name}} details!</h2>\n\t\t\t<div><label>id: </label> {{hero.id}}</div>\n\t\t\t<div>\n\t\t\t\t<label>name: </label>\n\t\t\t\t<input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n\t\t\t</div>\n\t\t"
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
