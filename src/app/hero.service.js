@@ -12,7 +12,12 @@ var HeroService = (function () {
     }
     HeroService.prototype.getHeroes = function () {
         return new Promise(function (resolve) {
-            setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 2000);
+            setTimeout(function () { return resolve(mock_heroes_1.HEROES); }, 999);
+        });
+    };
+    HeroService.prototype.getHero = function (id) {
+        return new Promise(function (resolve) {
+            setTimeout(function () { return resolve(mock_heroes_1.HEROES.find(function (h) { return h.id === id; })); }, 999);
         });
     };
     return HeroService;
